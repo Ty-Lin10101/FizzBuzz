@@ -6,19 +6,19 @@ package lab1;
 class FizzBuzz {
 
     public static void main(String[] args) {
-        doFizzBuzz();
+        doFizzBuzz(3, 5, 100);
     }
 
-    private static void doFizzBuzz() {
+    static void doFizzBuzz(int a, int b, int n) {
         int x = 0;
-        while (x <= 100) {
-            boolean divBy3 = x % 3 == 0;
-            boolean divBy5 = x % 5 == 0;
-            if (divBy3 && divBy5) {
+        while (x <= n) {
+            boolean divByA = x % a == 0;
+            boolean divByB = x % b == 0;
+            if (divByA && divByB) {
                 System.out.println("Fizz Buzz");
-            } else if (divBy3) {
+            } else if (divByA) {
                 System.out.println("Fizz");
-            } else if (divBy5) {
+            } else if (divByB) {
                 System.out.println("Buzz");
             } else {
                 System.out.println(x);
