@@ -6,31 +6,24 @@ package lab1;
 class FizzBuzz {
 
     public static void main(String[] args) {
+        doFizzBuzz();
+    }
 
-        for (int i = 1; i <= 100; i++) {
-
-            // Find out which numbers divide i.
-            boolean divisibleBy3 = i % 3 == 0;
-            boolean divisibleBy5 = i % 5 == 0;
-
-            // Print our appropriate result.
-            if (divisibleBy3 && divisibleBy5) {
-
+    private static void doFizzBuzz() {
+        int x = 0;
+        while (x <= 100) {
+            boolean divBy3 = x % 3 == 0;
+            boolean divBy5 = x % 5 == 0;
+            if (divBy3 && divBy5) {
                 System.out.println("Fizz Buzz");
-
-            } else if (divisibleBy3) {
-
+            } else if (divBy3) {
                 System.out.println("Fizz");
-
-            } else if (divisibleBy5) {
-
+            } else if (divBy5) {
                 System.out.println("Buzz");
-
             } else {
-
-                System.out.println(i);
-
+                System.out.println(x);
             }
+            x++;
         }
     }
 }
